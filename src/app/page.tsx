@@ -6,7 +6,6 @@ import Image from 'next/image'
 import { mockSitters, getLowestPrice, serviceTypeNames } from '@/lib/mock-data'
 
 const serviceTypes = [
-  { key: 'boarding', name: '寄宿', icon: '🏠', desc: '過夜照顧' },
   { key: 'home_visit', name: '到府', icon: '🚪', desc: '到府陪伴' },
   { key: 'walking', name: '散步', icon: '🐕', desc: '戶外運動' },
   { key: 'daycare', name: '日照', icon: '☀️', desc: '白天照顧' },

@@ -38,7 +38,7 @@ export interface Sitter {
 export interface SitterService {
   id: string;
   sitter_id: string;
-  service_type: 'boarding' | 'home_visit' | 'walking' | 'daycare';
+  service_type: 'home_visit' | 'walking' | 'daycare';
   price_per_night?: number;
   price_per_visit?: number;
   price_per_hour?: number;
@@ -139,7 +139,7 @@ export interface Booking {
   booking_number: string;
   sitter_id: string;
   user_id: string;
-  service_type: 'boarding' | 'home_visit' | 'walking' | 'daycare';
+  service_type: 'home_visit' | 'walking' | 'daycare';
   start_date: string;
   end_date: string;
   pet_ids: string[];
@@ -264,7 +264,6 @@ export const mockSitters: Sitter[] = [
 ];
 
 export const mockSitterServices: SitterService[] = [
-  { id: '1', sitter_id: '1', service_type: 'boarding', price_per_night: 800, description: '包含早晚餵食、散步、住宿環境清潔', is_active: true },
   { id: '2', sitter_id: '1', service_type: 'home_visit', price_per_visit: 500, description: '到府陪伴30分鐘，包含餵食、玩耍、清潔', is_active: true },
   { id: '3', sitter_id: '1', service_type: 'walking', price_per_hour: 200, description: '戶外散步60分鐘，適合活潑狗狗', is_active: true },
   { id: '4', sitter_id: '1', service_type: 'daycare', price_per_hour: 250, description: '日間照顧，適合上班族', is_active: true },
@@ -272,7 +271,7 @@ export const mockSitterServices: SitterService[] = [
   { id: '6', sitter_id: '2', service_type: 'daycare', price_per_hour: 200, description: '日間照顧，歡迎來我家玩', is_active: true },
   { id: '7', sitter_id: '3', service_type: 'home_visit', price_per_visit: 400, description: '到府照顧45分鐘，細心呵護', is_active: true },
   { id: '8', sitter_id: '3', service_type: 'walking', price_per_hour: 180, description: '到府接送的散步服務', is_active: true },
-  { id: '9', sitter_id: '4', service_type: 'boarding', price_per_night: 1200, description: '豪華寄宿別墅，含三餐、散步、24H監控', is_active: true },
+  { id: '9', sitter_id: '4', service_type: 'home_visit', price_per_visit: 600, description: '到府照顧，獨立庭院別墅體驗', is_active: true },
   { id: '10', sitter_id: '4', service_type: 'daycare', price_per_hour: 300, description: 'VIP日間照顧，獨立房間', is_active: true },
 ];
 
@@ -322,7 +321,7 @@ export const mockBookings: Booking[] = [
     booking_number: 'BK2026050101',
     sitter_id: '1',
     user_id: 'current-user',
-    service_type: 'boarding',
+    service_type: 'walking',
     start_date: '2026-06-05',
     end_date: '2026-06-08',
     pet_ids: ['1'],
@@ -373,7 +372,6 @@ export function getLowestPrice(sitterId: string): number | null {
 
 // 服務類型中文
 export const serviceTypeNames: Record<string, string> = {
-  boarding: '寄宿',
   home_visit: '到府',
   walking: '散步',
   daycare: '日照',

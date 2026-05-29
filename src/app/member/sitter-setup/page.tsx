@@ -12,7 +12,6 @@ interface ServiceOption {
 }
 
 const serviceOptions: ServiceOption[] = [
-  { id: 'boarding', name: '寄宿', description: '過夜照顧，包含早晚餵食、散步', basePrice: 800 },
   { id: 'home_visit', name: '到府', description: '到府陪伴30分鐘', basePrice: 500 },
   { id: 'walking', name: '散步', description: '戶外散步60分鐘', basePrice: 200 },
   { id: 'daycare', name: '日照', description: '日間照顧，適合上班族', basePrice: 250 },

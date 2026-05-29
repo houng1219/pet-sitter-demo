@@ -7,7 +7,7 @@ import { mockSitters, mockSitterServices, getLowestPrice, serviceTypeNames, petT
 
 const districts = ['全部', '鼓山區', '苓雅區', '左營區', '前鎮區', '三民區', '新興區', '鳥松區', '仁武區', '大寮區']
 const petTypes = ['全部', '狗', '貓', '兔', '其他']
-const serviceTypes = ['全部', '寄宿', '到府', '散步', '日照']
+const serviceTypes = ['全部', '到府', '散步', '日照'];
 
 export default function SittersPage() {
   const [selectedDistrict, setSelectedDistrict] = useState('全部')
@@ -25,7 +25,7 @@ export default function SittersPage() {
     if (selectedPetType !== '全部' && !sitter.pet_types.includes(petTypeMap[selectedPetType])) return false
     
     if (selectedService !== '全部') {
-      const serviceTypeMap: Record<string, string> = { '寄宿': 'boarding', '到府': 'home_visit', '散步': 'walking', '日照': 'daycare' }
+      const serviceTypeMap: Record<string, string> = { '到府': 'home_visit', '散步': 'walking', '日照': 'daycare' }
       const services = mockSitterServices.filter(s => s.sitter_id === sitter.id && s.service_type === serviceTypeMap[selectedService])
       if (services.length === 0) return false
     }
