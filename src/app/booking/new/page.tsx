@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { mockSitters, mockSitterServices, mockPets, serviceTypeNames } from '@/lib/mock-data'
 
-export default function BookingNewPage() {
+function BookingNewContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const sitterId = searchParams.get('sitter_id') || ''
@@ -308,5 +308,13 @@ export default function BookingNewPage() {
         </div>
       </form>
     </div>
+  )
+}
+
+export default function BookingNewPage() {
+  return (
+    <Suspense fallback={<div className="text-center py-20 text-gray-500">載入中…</div>}>
+      <BookingNewContent />
+    </Suspense>
   )
 }

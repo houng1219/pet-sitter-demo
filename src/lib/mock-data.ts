@@ -4,6 +4,7 @@ export interface Profile {
   id: string;
   email: string;
   full_name: string;
+  display_name?: string;
   phone?: string;
   avatar_url?: string;
   role: 'customer' | 'sitter' | 'admin';
@@ -63,7 +64,7 @@ export const mockSitterReviews: SitterReview[] = [
     overall_rating: 5,
     comment: '美麗姐非常細心，我家臘腸有點分離焦慮，她第一天就拍了影片讓我安心。強推！',
     created_at: '2025-12-20',
-    reviewer: { id: 'u1', display_name: '阿偉爸', avatar_url: '' },
+    reviewer: { id: 'u1', email: 'awei@example.com', full_name: '阿偉爸', display_name: '阿偉爸', avatar_url: '', role: 'customer' as const },
   },
   {
     id: 'r2',
@@ -72,7 +73,7 @@ export const mockSitterReviews: SitterReview[] = [
     overall_rating: 5,
     comment: '第二次預約了，環境很乾淨，小狗回來毛髮都閃亮亮的～',
     created_at: '2025-11-15',
-    reviewer: { id: 'u2', display_name: '小琪媽', avatar_url: '' },
+    reviewer: { id: 'u2', email: 'xiaoqi@example.com', full_name: '小琪媽', display_name: '小琪媽', avatar_url: '', role: 'customer' as const },
   },
   {
     id: 'r3',
@@ -81,7 +82,7 @@ export const mockSitterReviews: SitterReview[] = [
     overall_rating: 4,
     comment: '服務很好，只可惜回覆速度可以再快一點',
     created_at: '2025-10-30',
-    reviewer: { id: 'u3', display_name: 'Darren', avatar_url: '' },
+    reviewer: { id: 'u3', email: 'darren@example.com', full_name: 'Darren', display_name: 'Darren', avatar_url: '', role: 'customer' as const },
   },
   {
     id: 'r4',
@@ -90,7 +91,7 @@ export const mockSitterReviews: SitterReview[] = [
     overall_rating: 5,
     comment: '志偉帶我家柴犬去公園跑個1小時，回來累到不行但開心得很！',
     created_at: '2025-12-18',
-    reviewer: { id: 'u4', display_name: 'Peggy', avatar_url: '' },
+    reviewer: { id: 'u4', email: 'peggy@example.com', full_name: 'Peggy', display_name: 'Peggy', avatar_url: '', role: 'customer' as const },
   },
   {
     id: 'r5',
@@ -99,7 +100,7 @@ export const mockSitterReviews: SitterReview[] = [
     overall_rating: 4,
     comment: '小貓咪很害羞，但志偉很有耐心，第二天就願意出來了',
     created_at: '2025-11-25',
-    reviewer: { id: 'u5', display_name: '阿德', avatar_url: '' },
+    reviewer: { id: 'u5', email: 'ad@example.com', full_name: '阿德', display_name: '阿德', avatar_url: '', role: 'customer' as const },
   },
   {
     id: 'r6',
@@ -108,7 +109,7 @@ export const mockSitterReviews: SitterReview[] = [
     overall_rating: 5,
     comment: '別墅級的環境！ 大明哥的院子超大，我家黃金獵犬玩得很開心',
     created_at: '2025-12-10',
-    reviewer: { id: 'u6', display_name: '艾咪', avatar_url: '' },
+    reviewer: { id: 'u6', email: 'emi@example.com', full_name: '艾咪', display_name: '艾咪', avatar_url: '', role: 'customer' as const },
   },
 ];
 
