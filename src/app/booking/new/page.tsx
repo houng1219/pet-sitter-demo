@@ -186,7 +186,7 @@ function BookingNewContent() {
               value={selectedDate}
               onChange={(e) => { setSelectedDate(e.target.value); setSelectedTimeSlots([]) }}
               min={new Date().toISOString().split('T')[0]}
-              className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-gray-800"
               required
             />
           </div>
@@ -272,7 +272,7 @@ function BookingNewContent() {
           <select
             value={selectedPetId}
             onChange={(e) => setSelectedPetId(e.target.value)}
-            className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-gray-800"
             required
           >
             <option value="">請選擇寵物</option>
@@ -297,7 +297,7 @@ function BookingNewContent() {
             onChange={(e) => setSpecialRequests(e.target.value)}
             placeholder="請描述任何特殊需求，例如：寵物用藥、飲食限制、行為問題等"
             rows={3}
-            className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
+            className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none text-gray-800"
           />
         </div>
 
@@ -312,7 +312,7 @@ function BookingNewContent() {
                 value={emergencyName}
                 onChange={(e) => setEmergencyName(e.target.value)}
                 placeholder="聯絡人姓名"
-                className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-gray-800"
                 required
               />
             </div>
@@ -323,7 +323,7 @@ function BookingNewContent() {
                 value={emergencyPhone}
                 onChange={(e) => setEmergencyPhone(e.target.value)}
                 placeholder="0912345678"
-                className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-gray-800"
                 required
               />
             </div>
